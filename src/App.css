@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.candies-list {
+  border: 20px solid pink;
+  border-radius: 20px;
+}
+
+.candy {
+  background-color: rgb(218, 193, 196);
+}
+
+.cars-list {
+  background-color: lightsteelblue;
+  padding: 20px;
+}
+
+.car {
+  background-color: rgb(204, 212, 223);
+  margin: 30px;
+}
+
+.cats-list {
+  background-color: lightcyan;
+}
+
+.cat {
+  border: 10px dotted rgb(61, 61, 196);
+  margin: 10px;
+}
+
+.dogs-list {
+  background-color: mediumpurple;
+  margin: 10px;
+  padding: 10px;
+}
+
+.dog {
+  background-color: mediumslateblue;
+  margin: 10px;
+}
