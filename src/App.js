@@ -1,12 +1,13 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { getCandies, getCars } from './services/fetch-utils';
+import { getCandies, getCars, getCats } from './services/fetch-utils';
 import CandiesList from './CandiesList';
 import CarsList from './CarsList';
 
 function App() {
   const [candies, setCandies] = useState([]);
   const [cars, setCars] = useState([]);
+  const [cats, setCats] = useState([]);
 
   async function fetchAndStoreCandies() {
     const data = await getCandies();
@@ -20,9 +21,16 @@ function App() {
     setCars(data);
   }
 
+  async function fetchAndStoreCats() {
+    const data = await getCats();
+
+    setCats(data);
+  }
+
   useEffect(() => {
     fetchAndStoreCandies();
     fetchAndStoreCars();
+    fetchAndStoreCats();
   }, []);
 
   return (
