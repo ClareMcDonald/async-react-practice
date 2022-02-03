@@ -7,3 +7,11 @@ export async function getCandies() {
     
   return checkError(response);
 }
+
+export async function getCars() {
+  const response = await client
+    .from('cars')
+    .select();
+  
+  return checkError(response);
+}

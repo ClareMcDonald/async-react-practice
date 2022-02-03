@@ -1,10 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { getCandies } from './services/fetch-utils';
+import { getCandies, getCars } from './services/fetch-utils';
 import CandiesList from './CandiesList';
 
 function App() {
   const [candies, setCandies] = useState([]);
+  const [cars, setCars] = useState([]);
 
   async function fetchAndStoreCandies() {
     const data = await getCandies();
@@ -12,10 +13,17 @@ function App() {
     setCandies(data);
   }
 
+  async function fetchAndStoreCars() {
+    const data = await getCars();
+
+    setCars(data);
+  }
+
   useEffect(() => {
     fetchAndStoreCandies();
+    fetchAndStoreCars();
   }, []);
-  
+
   return (
     <div className="App">
       <CandiesList candies={candies} />
