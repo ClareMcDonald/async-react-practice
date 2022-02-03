@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { getCandies, getCars } from './services/fetch-utils';
 import CandiesList from './CandiesList';
+import CarsList from './CarsList';
 
 function App() {
   const [candies, setCandies] = useState([]);
@@ -26,7 +27,12 @@ function App() {
 
   return (
     <div className="App">
-      <CandiesList candies={candies} />
+      <div>
+        <CandiesList candies={candies} />
+      </div>
+      <div>
+        <CarsList cars={cars}/>
+      </div>
     </div>
   );
 }
