@@ -3,9 +3,9 @@ import './App.css';
 
 export default function CarItem({ car }) {
   return <div className="car">
-    <p>{car.model}</p>
-    <p>{car.make}</p>
-    <p>{car.year}</p>
-    <p>{car.color}</p>
+    <p>Model: {car.model}</p>
+    <p>Make: {car.make}</p>
+    <p>Year: {car.year}</p>
+    <p>Color: {car.color}</p>
   </ div>;
 }
