@@ -1,4 +1,5 @@
 import React from 'react';
+import CatItem from './CatItem';
 
 export default function CatsList({ cats }) {
   return <div>
