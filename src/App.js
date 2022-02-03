@@ -4,6 +4,7 @@ import { getCandies, getCars, getCats, getDogs } from './services/fetch-utils';
 import CandiesList from './CandiesList';
 import CarsList from './CarsList';
 import CatsList from './CatsList';
+import DogsList from './DogsList';
 
 function App() {
   const [candies, setCandies] = useState([]);
@@ -52,6 +53,9 @@ function App() {
       </div>
       <div>
         <CatsList cats={cats}/>
+      </div>
+      <div>
+        <DogsList dogs={dogs}/>
       </div>
     </div>
   );
