@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getCandies, getCars, getCats } from './services/fetch-utils';
 import CandiesList from './CandiesList';
 import CarsList from './CarsList';
+import CatsList from './CatsList';
 
 function App() {
   const [candies, setCandies] = useState([]);
@@ -40,6 +41,9 @@ function App() {
       </div>
       <div>
         <CarsList cars={cars}/>
+      </div>
+      <div>
+        <CatsList cats={cats}/>
       </div>
     </div>
   );
